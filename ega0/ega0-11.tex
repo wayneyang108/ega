@@ -835,10 +835,159 @@ admit a injective resolution of bounded length, and that in \sref{0.11.5.6} the 
 
 \subsection{Hypercohomology of a functor with respect to a complex $K_{\bullet}$}
 \label{subsection:0.11.6}
+\begin{env}[11.6.1]
+Let $\cat{C}$ be a abelian category, $\cocx{K} = (K_i)_{i\in \bb{Z}}$ a complex of objects in $\cat{C}$, whose differential is of degree -1.
+A \emph{left Cartan--Eilenberg resolution} of $\cocx{K}$ is formed by a bicomplex $\cobcx{L} = (L_{ij})$ having differential of degree 01 with $L_{ij} = 0$ for $j<0$, 
+and a morphism of simple complexes $\varepsilon: \cocx{L_0}\rightarrow \cocx{K}$, so that the conditions obtained from those of \sref{0.11.4.2} by `reversal arrows' are fulfilled.
+If all object of $\cat{C}$ is quotient of a projective object, all complex $\cocx{K}$ of $\C$ admits a \emph{projective} Cartan--Eilenberg resolution, 
+that is to say formed of projective object $L_{ij}$, with the functorial properties similar to the \sref{0.11.4.2}.
+Furthermore, if $\cocx{K}$ is inf limit (resp. sup limit), we can suppose that $L_{ij} = 0$ for $i<i_0$ (resp. $i>i_0$) if $K_i = 0$ for $i<i_0$ (resp. $i>i_0$).
+If all object of $\C$ admits a projective resolution of length $\leq n$, we can suppose that $L_{ij} = 0$ for $j>n$.
+\end{env}
+
+\begin{env}[11.6.2]
+\oldpage[0\textsubscript{III}]{40}
+Suppose that $T$ is a \emph{additive covariant functor} of $\C$ in an abelian category $\cat{C'}$.
+The definition of the \emph{hypercohomology} $\cocx{\LL}T(\cocx{K})$ and the \emph{spectral sequences of hypercohomology} of $T$ with respect to a complex $\cocx{K}$ of $\C$ (when they exist) 
+are again done from \sref{0.11.4.3} by `reversal arrows', the $E^2$ terms of two spectral sequences are obtained similarly 
+\[
+  \label{0.11.6.2.1}
+  'E_{pq}^2 = \HH_p(\LL_q T(\cocx{K}))
+  \tag{11.6.2.1}
+\]
+\[
+  \label{0.11.6.2.2}
+  ''E_{pq}^2 = \LL_p T(\HH_q(\cocx{K})))
+  \tag{11.6.2.2}
+\]
+where $\LL_p T$ denoted the $p^e$ derived from $T$ for $p\geq 0$, and 0 for $p<0, \LL_q T(\cocx{K})$ the complex $(\LL_q T(K_i))_{i\in \bb{Z}}$.
+
+The properties of the hypercohomology cannot all be deduced by simple `reversal arrows' from those hypercohomology (unless we make additional assumptions of type AB5*) of $T$, 
+\sref{0.1.5} on the category $\cat{C'}$ due to the \emph{regular} condition of previous two sequences, which in this time requires to apply the criteria of \sref{0.11.3.4}.
+The latter shows that when we assume that in $\cat{C'}$ the inductive limit filtrants exist and are exact, then the complex defined by the bicomplex $T(\cobcx{L})$ exists, 
+and the \emph{second} spectral sequence $''E(T(\cobcx{L}))$ is \emph{regular} this time.
+If we suppose, either that $\cocx{K}$ is inf limit, or that there exists a integer $n$ such that all object of $\C$ admits a projective resolution of length $\leq n$, 
+then the \emph{two} spectral sequences of hypercohomology exist (without hypothesis of $\cat{C'}$) and are \emph{biregular}.
+\end{env}
+
+\begin{proposition}[11.6.3]
+Let $\cat{C}, \cat{C'}$ be two abelian category, $T$ a additive covariant functor from $\cat{C}$ to $\cat{C'}$. Then: 
+\begin{enumerate}
+  \item[(i)] The hypercohomology $\cocx{\LL} T(\cocx{K})$ is a homological functor in the abelian category of inf limits of complex of $\cat{C}$.
+  \item[(ii)] If $\cocx{K}$ is a inf limit of complex of $\cat{C}$. If $\LL_n T(K_i) = 0$ for all $n>0$ and all $i\in \bb{Z}$, we have functorial isomorphisms 
+  \[
+    \label{0.11.6.3.1}
+    \LL_i T(\cocx{K}) \simto \HH_i(T(\cocx{K}))
+    (i\in \bb{Z})
+    \tag{11.6.3.1}
+  \]
+  \item[(iii)] If $\cocx{K}$ is a inf limit of complex of $\cat{C}$. If $\cobcx{L} = (L_{ij})$ is a bicomplex such that $L_{ij} = 0$ for $j<0$ and that, 
+  for all $i, \cocx{L_i}$ is a resolution of $K_i$; finally suppose that $\LL_n T(L_{ij})$ for all pair $(i,j)$ and all $n>0$. 
+  Then there exists a functoral isomorphism
+  \[
+    \label{0.11.6.3.2}
+    \cocx{\LL} T(\cocx{K}) \simto \cocx{\HH} (T(\cobcx{L}))
+    (i\in \bb{Z})
+    \tag{11.6.3.2}
+  \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The proof are like those of \sref{0.11.5.2}, \sref{0.11.4.5} and \sref{0.11.5.3} in the case of inf limit complexes. 
+We leave the deatil to the reader.
+\end{proof}
+
+\begin{env}[11.6.4]
+We have completely analogous results to the additive covariant \emph{multifunctor} in each arguments. 
+For example for a bifunctor $T$, we have two spectral sequences of hypercohomology of $E^2$ terms given by 
+\[
+  \label{0.11.6.4.1}
+  'E_{pq}^2 = \HH_q(\LL_q T(\cocx{K}, \cocx{K'}))
+  \tag{11.6.4.1}
+\]
+\[
+  \label{0.11.6.4.2}
+  ''E_{pq}^2 = \sum_{q'+q''=q}\LL_q(\HH_{q'}(\cocx{K}), \HH_{q''}(\cocx{K'}))
+  \tag{11.6.4.2}
+\]
+Here again, it is the \emph{second} spectral sequence which is regular, the two sequences are biregular when it comes to the complex $\cat{K}, \cat{K'}$ inf limits, 
+or when the objects of abelian categories that we consider have projective resolution of fixed length. Furthermore: 
+\end{env}
+
+\begin{proposition}[11.6.5]
+Let $\cat{C}, \cat{C'}, \cat{C''}$ be three abelian category, $T$ a biadditive covariant bifunctor from $\cat{C}\times \cat{C'}$ to $\cat{C''}$.
+\begin{enumerate}
+  \item[(i)] $\cocx{\LL} T(\cocx{K}, \cocx{K'})$ is a homological bifunctor in each of the inf limits complex $\cocx{K}, \cocx{K'}$ (formed respectively from the objects of $\cat{C}, \cat{C'}$).
+  \item[(ii)] Suppose $\cocx{K}$ and $\cocx{K'}$ are inf limits. If $\cobcx{L} = (L_{ij}), \cobcx{L'} = (L'_{ij})$ two bicomplex such that $L_{ij} = 0$ and $L'_{ij} = 0$ for $j<0$, 
+  that for all $i, \cocx{L_i}$ is a resolutoin of $K_i$ and $\cocx{L'_i}$ is a resolutoin of $K'_i$, and finally that $\LL_n T(L_{ij}, L'_{hk}) = 0$ for $n>0$ and all system $(i,j,h,k)$.
+  Then we have a functorial isomorphism
+  \[
+    \label{0.11.6.5.1}
+    \cocx{\LL} T(\cocx{K}, \cocx{K'}) \simto \cocx{\HH}(T(\cobcx{L}, \cobcx{L'}))
+    \tag{11.6.5.1}
+  \]
+  \item[(iii)] Furthermore suppose that for all pair $(i,j)$ and all pair $(h,k)$, the functors $A\mapsto T(A,L'_{hk})$ and $A'\mapsto T(L_{hk}, A)$ are exact in $\cat{C}$ and $\cat{C'}$ respectively.
+  Then we have functorial isomorphisms
+  \[
+    \label{0.11.6.5.2}
+    \cocx{\LL} T(\cocx{K}, \cocx{K'}) \simto \cocx{\HH}(T(\cobcx{L}, \cocx{K'}))\simto \cocx{\HH}(T(\cocx{K}, \cobcx{L'}))
+    \tag{11.6.5.2}
+  \]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The proofs are analogous to those of \sref{0.11.5.5} and \sref{0.11.5.6}.
+\end{proof}
 
 \subsection{Hypercohomology of a functor with respect to a bicomplex $K_{\bullet\bullet}$}
 \label{subsection:0.11.7}
+\begin{env}[11.7.1]
+Let $\cat{C}$ be an abelian category in which all object is quotient of a projective object.
+Considering a bicomplex $\cocx{K} = (K_{ij})$ formed objects of $\cat{C}$, and therefore the two degrees have \emph{inf limit}; 
+We can consider $\cobcx{K}$ as a (simple) complex formed from objects $\cocx{K_i} = (K_{ij})_{j\geq 0}$ of the abelian category $\cat{K}$ of complexes with positive degrees from objects of $\cat{C}$.
+It results from the lemma \sref{0.11.5.2.1} (or instead the `dual' lemma obtained by `reversal arrows') and from (~M, ~V, ~2.2) that $\cobcx{K}$ admits a \emph{projective Cartan--Eilenberg resolution} 
+in the category $\cat{K}$; Such a resolution is a \emph{tricomplex} $cotcx{M} = (M_{ijk})$ of $\cat{C}$, has degree all $\geq 0$, formed projective objects, such that 
+for all $i,\cobcx{M_i}, B_i^\text{I}(\cotcx{M}), Z_i^\text{I}(\cotcx{M}), \HH_i^\text{I}(\cotcx{M})$ constitute the \emph{projective resolutions} of 
+$\cocx{K_i}, B_i^\text{I}(\cobcx{K}), Z_i^\text{I}(\cobcx{K}), \HH_i^\text{I}(\cobcx{K})$ respectively in the category $\cat{K}$; 
+In particular, for all pair $(i,j), \cocx{M_{ij}}$ is a \emph{projective resolution} of $K_{ij}$ in $\cat{C}$.
+\end{env}
 
+\begin{proposition}[11.7.2]
+If $T$ is a additive covariant functor in a abelian category $\cat{C'}$. 
+With the notations of \sref{0.11.7.1}, the homology $\cocx{\HH}(T(\cotcx{M}))$ of simple complex associated to the tricomplex $T(\cotcx{M})$ is canonical isomorphic to 
+the hypercohomology $\cocx{\LL} T(\cocx{K})$ of simple complex associated to $\cobcx{K}$ \sref{0.11.6.2}, and the abutment shared with six biregular spectral denoted by 
+$^{(t)}E$ (with $t=a,b,a',b',c$ or $d$), therefore the $E^2$ terms are given by the formulas 
+\[
+  ^{(a)}E_{pq}^2 = \LL_p T(\HH_q(\cobcx{K}))
+\]
+\[
+  ^{(b)}E_{pq}^2 = \HH_p (\LL_q^\text{II}T(\cobcx{K}))
+\]
+\[
+  ^{(a')}E_{pq}^2 = \LL_p T(\HH_q^\text{I}(\cobcx{K}))
+\]
+\[
+  ^{(b')}E_{pq}^2 = \HH_p (\LL_q T(\cobcx{K}))
+\]
+\[
+  ^{(c)}E_{pq}^2 = \LL_p T(\HH_q^\text{II}(\cobcx{K}))
+\]
+\[
+  ^{(d)}E_{pq}^2 = \HH_p T(\L_q^\text{I}(\cobcx{K}))
+\]
+\end{proposition}
+\begin{proof}
+(
+  We recall that we utilize the notation $F(\cocx{A})$ to denote the complex of objects $F(A_i)$ for all complex $\cocx{A} = A_i$; 
+  for example $\LL_q^\text{II} T(\cobcx{K})$ denoted the complex $(\LL_q^\text{II} T(\cocx{K_i}))_{i\geq 0}$, 
+  where $\LL_q^\text{II} T(\cocx{K_i})$ is the hypercohomology of indice $q$ of functor $T$ with respect to the simple complex $\cocx{K_i}$.
+)
+\end{proof}
+
+\begin{remark}[11.7.3]
+
+\end{remark}
 \subsection{Supplement on the cohomology of simplicial complexes}
 \label{subsection:0.11.8}
 
