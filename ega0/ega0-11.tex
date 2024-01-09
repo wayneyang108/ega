@@ -139,7 +139,7 @@ If in addition the filtration of $E^n$ is \emph{discrete} and \emph{exhaustive},
 
 \begin{env}[11.1.7]
 \label{0.11.1.7}
-Suppose that filtered inductive limits exist and are exact in the category $\cat{C}$, and let $(E_\lambda,u_{\mu\lambda})$ be an inductive system (over a filtered set of indices) of spectral sequeneces in $\cat{C}$.
+Suppose that filtered inductive limits exist and are exact in the category $\cat{C}$, and let $(E_\lambda,u_{\mu\lambda})$ be an inductive system (over a filtered set of indices) of spectral sequences in $\cat{C}$.
 Then the \emph{inductive limit} of this inductive system exists in the additive category of spectral sequences of objects of $\cat{C}$: to see this, it suffices to define $E_r^{pq}$, $d_r^{pq}$, $\alpha_r^{pq}$, $B_\infty(E_2^{pq})$, $Z_\infty(E_2^{pq})$, $E^n$, $F^p(E^n)$, and $\beta^{pq}$ as the respective inductive limits of the $E_{r,\lambda}^{pq}$, $d_{r,\lambda}^{pq}$, $\alpha_{r,\lambda}^{pq}$, $B_\infty(E_{2,\lambda}^{pq})$, $Z_\infty(E_{2,\lambda}^{pq})$, $E_\lambda^n$, $F^p(E_\lambda^n)$, and $\beta_\lambda^{pq}$; the verification of the conditions of \sref{0.11.1.1} follows from the exactness of the functor $\varinjlim$ on $\cat{C}$.
 \end{env}
 
@@ -911,6 +911,7 @@ For example for a bifunctor $T$, we have two spectral sequences of hypercohomolo
   ''E_{pq}^2 = \sum_{q'+q''=q}\LL_q(\HH_{q'}(\cocx{K}), \HH_{q''}(\cocx{K'}))
   \tag{11.6.4.2}
 \]
+\oldpage[0\textsubscript{III}]{41}
 Here again, it is the \emph{second} spectral sequence which is regular, the two sequences are biregular when it comes to the complex $\cat{K}, \cat{K'}$ inf limits, 
 or when the objects of abelian categories that we consider have projective resolution of fixed length. Furthermore: 
 \end{env}
@@ -920,7 +921,7 @@ Let $\cat{C}, \cat{C'}, \cat{C''}$ be three abelian category, $T$ a biadditive c
 \begin{enumerate}
   \item[(i)] $\cocx{\LL} T(\cocx{K}, \cocx{K'})$ is a homological bifunctor in each of the inf limits complex $\cocx{K}, \cocx{K'}$ (formed respectively from the objects of $\cat{C}, \cat{C'}$).
   \item[(ii)] Suppose $\cocx{K}$ and $\cocx{K'}$ are inf limits. If $\cobcx{L} = (L_{ij}), \cobcx{L'} = (L'_{ij})$ two bicomplex such that $L_{ij} = 0$ and $L'_{ij} = 0$ for $j<0$, 
-  that for all $i, \cocx{L_i}$ is a resolutoin of $K_i$ and $\cocx{L'_i}$ is a resolutoin of $K'_i$, and finally that $\LL_n T(L_{ij}, L'_{hk}) = 0$ for $n>0$ and all system $(i,j,h,k)$.
+  that for all $i, \cocx{L_i}$ is a resolution of $K_i$ and $\cocx{L'_i}$ is a resolution of $K'_i$, and finally that $\LL_n T(L_{ij}, L'_{hk}) = 0$ for $n>0$ and all system $(i,j,h,k)$.
   Then we have a functorial isomorphism
   \[
     \label{0.11.6.5.1}
@@ -958,6 +959,7 @@ If $T$ is a additive covariant functor in a abelian category $\cat{C'}$.
 With the notations of \sref{0.11.7.1}, the homology $\cocx{\HH}(T(\cotcx{M}))$ of simple complex associated to the tricomplex $T(\cotcx{M})$ is canonical isomorphic to 
 the hypercohomology $\cocx{\LL} T(\cocx{K})$ of simple complex associated to $\cobcx{K}$ \sref{0.11.6.2}, and the abutment shared with six biregular spectral denoted by 
 $^{(t)}E$ (with $t=a,b,a',b',c$ or $d$), therefore the $E^2$ terms are given by the formulas 
+\oldpage[0\textsubscript{III}]{42}
 \[
   ^{(a)}E_{pq}^2 = \LL_p T(\HH_q(\cobcx{K}))
 \]
@@ -983,13 +985,107 @@ $^{(t)}E$ (with $t=a,b,a',b',c$ or $d$), therefore the $E^2$ terms are given by 
   for example $\LL_q^\text{II} T(\cobcx{K})$ denoted the complex $(\LL_q^\text{II} T(\cocx{K_i}))_{i\geq 0}$, 
   where $\LL_q^\text{II} T(\cocx{K_i})$ is the hypercohomology of indice $q$ of functor $T$ with respect to the simple complex $\cocx{K_i}$.
 )
+
+Denoted by $\cocx{L}$ the simple complex associated to $\cobcx{K}$, so that $L_i = \bigoplus_{r+s=i}K_{rs}$, and having $N_{ij} = \bigoplus_{r+s=i}M_{rsj}$;
+It is clear that for any $i, N_i$, is a \emph{projective resolution} of $L_i$ in $\C$;
+Thus it results from \sref{0.11.6.3} and \sref{0.11.6.4} that we have a functorial isomorphism $\cocx{\LL}(T(\cocx{L})) \simto \cocx{\HH}(T(\cobcx{N}))$;
+As the simple complex associated to bicomplex $T(\cobcx{N})$ is also associated to tricomplex $T(\cotcx{M})$, this proves the statement of first assertion.
+
+In addition, $\cocx{\LL}(T(\cocx{L}))$ is the abutment of two hyperhomology spectral sequence \sref{0.11.6.2} of $T$ relatively to the simple complex $\cocx{L}$, 
+which are none other than the sequences $^{(b')}E$ and $^{(a)}E$ respectively.
+
+Considering now $\cotcx{M}$ as a bicomplex $\cobcx{U}$ with $U_{ij} = \bigoplus_{r+s=j} M_{irs}$;
+$\cocx{\HH}(T(\cotcx{M}))$ is again the abutment of two spectral sequence of bicomplex $T(\cobcx{U})$.
+Or, for all $i, \cobcx{M_i}$ is a bicomplex satisfied the conditions of \sref{0.11.6.3} relatively to the simple complex $\cocx{K_i}$;
+thus $\HH_q^{\text{II}}(T(\cocx{U_i})) = \LL_q^{\text{II}}T(\cocx{K_i})$, and the first spectral sequence of $T(\cobcx{U})$ is none other than $^(b)E$.
+On the other part, for all $r, \cocx{\cocx{M}_r}$, is a Cartan--Eilenberg resolution of simple ocmplex $\cocx{K}_r$;
+The calculation makes in (~M, ~XV, ~2) showed that $\HH_q^\text{I}(T(\cocx{M}_{,rs})) = T(\HH_q^\text{I}(\cocx{M}_{,rs}))$, 
+where $\HH_q^\text{I}(T(\cocx{U}_{,j})) = \bigoplus_{r+s=j} T(\HH_q^\text{I}(\cocx{M}_{,rs}))$;
+In other words, the somple complex $\HH_q^\text{I}(T(\cobcx{U}))$ is none other than the simple complex associated to bicomplex $T(\HH_q^\text{I}(\cotcx{M}))$.
+Or, for all $q, H_q^\text{I}(\cotcx{M})$ is a \emph{projective} resolution of simple complex $\HH_q^\text{I}(\cobcx{K})$ in the category $\cat{K}$;
+apply \sref{0.11.6.3}, we see that we have
+\[
+  \HH_q^\text{II}(T(\HH_q^\text{I}(\cotcx{M}))) = \LL_p T(\HH_q^\text{I}(\cobcx{K}))
+\]
+and we obtained immediately the sequence $^(a')E$.
+Finally, the sequence $^(c)E$ and $^(d)E$ are obtained in intervertant the roles of the indices $i$ and $j$ in the definition of tricomplex $\cotcx{M}$ and 
+in application to the new tricomplex the preceding reasonings.
+
+We said that $\cocx{\LL}T(\cobcx{K})$ is the \emph{hyperhomology} of $T$ relative to \emph{bicomplex} $\cobcx{K}$.
 \end{proof}
 
-\begin{remark}[11.7.3]
+\begin{remarks}[11.7.3]
+\begin{enumerate}
+  \item[(i)] It results from \sref{0.11.6.3} that $\cocx{\LL}T(\cobcx{K})$ is a \emph{homological functor} in the category of bicomplexes $\cobcx{K}$ of $\C$ inf limits in any of their degrees.
+  \item[(ii)] If $\cotcx{M}$ is a tricomplex of $\C$ such that for all pair $(r,s), \cocx{M_{rs,}}$ are a \emph{resolution} of $K_{rs}$ and that $L_n T(M_{ijk}) = 0$ for all the triplets $(i,j,k)$ and all $n>0$.
+  Then we have a isomorphism $\cocx{\LL} T(\cobcx{K}) \simto \cocx{\HH}(T(\cotcx{M}))$; 
+  In fact, with the notations of the proof of \sref{0.11.7.2}, $\cocx{N_i}$ is a resolution of $L_i$ such that $L_n T(N_{ij}) = 0$ for $n>0$ and all pair $(i,j)$, 
+  and it suffices to apply \sref{0.11.6.3, (iii)}.
+\oldpage[0\textsubscript{III}]{43}
+  \item[(iii)]  We generalize immediately the results of \sref{0.11.7.2} to covariant multifunctor;
+  For example, if $\C'$ is a second abelian category in which all object is quotient of projective object, 
+  $\cobcx{K'}$ a bicomplex of $\C'$ which the two degrees are bounded below, and $T$ a additive covariant bifunctor of $\C\times\C'$ in an abelian category $\C''$.
+  If $\cocx{L}$ and $\cocx{L'}$ are the simple complexes associated to $\cobcx{K}$ and $\cobcx{K'}$ respectively, 
+  we define the hyperhomology of $T$ with respect to two bicomplexes, $\cobcx{K}, \cobcx{K'}$ as the hyperhomology $\cocx{\LL}T(\cocx{L}, \cocx{L'})$;
+  apply \sref{0.11.6.4} and \sref{0.11.6.5}, we have of the same that in \sref{0.11.7.2} six spectral sequences abutment to this hyperhomology, 
+  and we leave them to the reader.
+\end{enumerate}
+\end{remarks}
 
-\end{remark}
 \subsection{Supplement on the cohomology of simplicial complexes}
 \label{subsection:0.11.8}
+\begin{env}[11.8.1]
+Let $A$ be an finite set, $\Sigma(A)$ the set of finite sequences $\sigma = (\alpha_0, ..., \alpha_h)$ of elements of $A$ (``simplexes'' of $A$);
+We have $|\sigma| = \{\alpha_0, ..., \alpha_h\}$;
+We call that the chain of complex $\cocx{C}(A)$ is the graded free abelian group generated by the elements of $\Sigma(A), (\alpha_0, ..., \alpha_h)$ are of \emph{degree} $h$, 
+with a differential defined by $d(\alpha_0, ..., \alpha_h) = \sum_{j=0}^{h} (-1)^j(\alpha_0, ..., \hat{\alpha_j}, ..., \alpha_h)$.
+The subgroup $\cocx{D}(A)$ of $\cocx{C}(A)$ generated by the chain $\sigma = (\alpha_0, ..., \alpha_h)$ for which two of $\alpha_i$ are equal, 
+and for the chain $\pi(\sigma) - \epsilon_\pi \dot \sigma$, where for all permutation $\pi, \pi(\sigma) = (\alpha_{\pi(0)}, ..., \alpha_{\pi(h)})$ and $\epsilon_\pi$ is the signature of $\pi$, 
+and a subcomplex of $\cocx{C}(A)$ whose elements are called \emph{degenerate} chain;
+We have $\cocx{L}(A) = \cocx{C}(A) / \cocx{D}(A)$, and we have a nautural homomorphism of complexes $p: \cocx{C}(A) \rightarrow \cocx{L}(A)$.
+We define on the other hand a homomorphism of complexes $j: \cocx{L}(A) \rightarrow \cocx{C}(A)$ in the same way: 
+we totally ordered $A$; to the class module. $\cocx{D}(A)$ of simplex $\sigma = (\alpha_0, ..., \alpha_h)$, we make corresponding 0 if two of $\alpha_i$ are equal, 
+and the sequence $(\beta_0, ..., \beta_h)$ of $\alpha_i$ ranges \emph{in the increasing order} in the contrary case.
+It is clear that $p\circ j$ is the \emph{identity} of $\cocx{L}(A)$.
+\end{env}
+
+\begin{env}[11.8.2]
+If $B$ is a second finite set; If $d', d''$ are the differentials of $\cocx{C}(A)$ and $\cocx{C}(B)$,
+the complex tensor product $\cocx{C}(A) \bigotimes \cocx{C}(B)$ can be considered as the free abelian group generated by the elements of $\Sigma(A)\bigotimes\Sigma(B)$, 
+with the differential $d(\sigma, \tau) = (d'\sigma, \tau) + (-1)^{h+1}(\sigma, d''\tau)$ if $Card|\sigma| = h + 1$.
+
+The nautural homomorphism $\cocx{C}(A)\rightarrow \cocx{L}(A), \cocx{C}(B) \rightarrow \cocx{L}(B)$ define a homomorphism $p: \cocx{C}(A)\bigotimes\cocx{C}(B) \rightarrow \cocx{L}(A)\bigotimes\cocx{L}(B)$, 
+the last tensor product is isomorphic to $(\cocx{C}(A)\bigotimes\cocx{C}(B))/(\cocx{C}(A)\bigotimes\cocx{D}(B) + \cocx{D}(A)\bigotimes\cocx{C}(B))$.
+Similarly, with the help of the homomorphisms $\cocx{L}(A)\rightarrow\cocx{C}(A)$ and $\cocx{L}(B)\rightarrow\cocx{C}(B)$ defined in \sref{0.11.8.1} 
+(using total orders on $A$ and $B$), we define a homomorphism $j: \cocx{L}(A)\bigotimes\cocx{L}(B) \rightarrow \cocx{C}(A)\bigotimes\cocx{C}(B)$ such that $p\circ j$ is the identity.
+
+With this notations:
+\end{env}
+
+\oldpage[0\textsubscript{III}]{44}
+\begin{proposition}[11.8.3]
+\end{proposition}
+
+\begin{env}[11.8.4]
+\end{env}
+
+\begin{proposition}[11.8.5]
+\end{proposition}
+
+\begin{env}[11.8.6]
+\end{env}
+
+\begin{remark}[11.8.7]
+\end{remark}
+
+\begin{env}[11.8.8]
+\end{env}
+
+\begin{proposition}[11.8.9]
+\end{proposition}
+
+\begin{env}[11.8.10]
+\end{env}
 
 \subsection{A lemma on the complexes of finite type}
 \label{subsection:0.11.9}
