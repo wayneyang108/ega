@@ -1,9 +1,7 @@
 # EGA
 
-Community translation (French to English) of A. Grothendieck's EGA.
-On est désolé, Grothendieck.
-
-~~View online [here](https://ega.fppf.site/).~~
+Community translation (French to English) of A. Grothendieck and J. Dieudonné's *Éléments de géométrie algébrique*.
+Désolé, Grothendieck.
 
 For discussion regarding this project, visit [#ega:matrix.org](https://matrix.to/#/#ega:matrix.org)!
 
@@ -12,24 +10,8 @@ To compile, `make book`, `make pdfs`, or `make all`.
 
 ## PDFs
 
-(All the PDFs are auto-compliled every hour if any changes have been made since the last auto-compile, so will always be up to date with the latest commit --- if two versions have different autobuild times but the same git commit, then they are identical).
+The PDFs are automatically generated whenever any changes are made, and you can always find the latest version on the [releases page](https://github.com/ryankeleti/ega/releases).
 
-Individual volumes can be downloaded separately:
-
-- [What this is](https://ryankeleti.com/ega/what-auto.pdf)
-- [Introduction](https://ryankeleti.com/ega/intro-auto.pdf)
-- [EGA 0](https://ryankeleti.com/ega/ega0-auto.pdf)
-- [EGA I](https://ryankeleti.com/ega/ega1-auto.pdf)
-- [EGA II](https://ryankeleti.com/ega/ega2-auto.pdf)
-- [EGA III](https://ryankeleti.com/ega/ega3-auto.pdf)
-- [EGA IV](https://ryankeleti.com/ega/ega4-auto.pdf)
-- [References](https://ryankeleti.com/ega/ref-auto.pdf)
-
-Alternatively, the full document can be downloaded:
-
-- [Book](https://ryankeleti.com/ega/book-auto.pdf)
-
-*Please contact me if for any reason these links break! Thank you :)*
 
 ## Current status
 
@@ -115,7 +97,7 @@ Here is the current status of the translation, along with who is currently worki
 + [x] 1. Cohomology of affine schemes _(@ryankeleti)_
 + [ ] 2. Cohomological study of projective morphisms (~15 pages) _(@thosgood)_
 + [x] 3. Finiteness theorem for proper morphisms _(@ryankeleti)_
-+ [ ] 4. The fundamental theorem of proper morphisms. Applications (~30 pages)
++ [ ] 4. The fundamental theorem of proper morphisms. Applications (~30 pages) _(@calebji0)_
 + [ ] 5. An existence theorem for coherent algebraic sheaves (~10 pages)
 + [ ] 6. Local and global Tor functors; Künneth formula (~40 pages)
 + [ ] 7. Base change for homological functors of sheaves of modules (~30 pages)
@@ -161,7 +143,7 @@ Here is the current status of the translation, along with who is currently worki
 - hyperref links to equations (e.g. 3.3.9.1)
 - check for any `\unsure` commands in the source
 - check that all `\hyperref` references are found
-- when this is finished (?!) we should [assign a DOI?](https://guides.github.com/activities/citable-code/)
+- when this is finished (?!) should we [assign a DOI?](https://guides.github.com/activities/citable-code/)
 - web version? (work in progress!)
 - more detailed style guidelines? (e.g. language, sentence construction, etc.)
 - link (M), (G), (T) references
